@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Verfication Of Age</title>
+        <script>
+            function myfun()
+            {
+                var p=/^(([0-2][0-9])|([3][0-1]))|[/](([0][0-9])|([1][0-2]))[/]([1][9]{2})|([2][0-9]{3})$/;
+                var dob=document.getElementById("txtDOB").value;
+                var year=dob.split("/");
+                if(p.test(dob))
+                {
+                    if((2020-parseInt(year[2]))>=18)
+                    {
+                        window.alert("Eligible");
+                    }
+                    else{
+                        window.alert("Not Eligible");
+                    }
+                }
+                else{
+                    window.alert("Enter Correct Date (dd/mm/yyyy)");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        DateOfBirth:<input type="text" id="txtDOB" />
+        <button type="button" onclick="myfun()">Validate</button>
+    </body>
+</html>
