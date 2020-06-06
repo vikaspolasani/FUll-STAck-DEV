@@ -1,0 +1,39 @@
+.main{
+    display: inline-block;
+    border: 3px solid black;
+    background-color: lightcyan;
+    text-align: center;
+    width: 100%;
+}
+.a1{
+    border:2px solid red;
+    float: left;
+}
+.a3{
+    border:2px solid red;
+    float: right;
+
+}
+.a2{
+    padding-top: 20px;
+    display: inline-block;
+}
+nav{
+    border: 3px solid black;
+    width: 100%;
+    font-size: larger;
+}
+.a4{
+    width: 50%;
+    float: left;
+}
+a{
+    padding: 65px;
+}
+a:hover{
+    font-style: italic;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <link href="sample.css" rel="stylesheet"/>
+    <style>
+        #p{
+            text-align: center;
+                margin-top: 10px;
+                padding: 5%;
+        }
+    </style>
+<script>
+    function myfun()
+    {
+        var valpass;
+            valpass=document.getElementById('txtPassword').value;
+            if(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@$#]).{5,12}$/.test(valpass))
+            {
+                window.alert("Valid Password");
+            }
+            else{
+                window.alert("Invalid Password");
+    }
+    }
+</script>
+</head>
+<body>
+    <div class="main">
+        <img class="a1" src="1.jpg" height="=100px" width="100px"/> 
+        <img class="a3" src="1.jpg" height="=100px" width="100px"/>
+        <h1 class="a2">Feedback Form</h1>
+    </div>
+    <div id="p">
+    Username:<input type="text" id="txtUsername"/><br />
+    Password:<input type="password" id="txtPassword"/><br />
+    <button type="button" onclick="myfun()">validate</button>
+    </div>
+</body>
+</html>
