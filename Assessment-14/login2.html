@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>
+        <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css"/>
+        <script type="text/javascript" src="bootstrap-4.5.0-dist/js/jquery.min.js"></script>
+        <script type="text/javascript" src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#btnclick").click(function(){
+                    var email=$("#txtemail").val();
+                    var u_password=$("#txtpass").val();
+                    var api_url="http://localhost:3000/user_registration/email/u_password";
+                    var data={
+                        email,
+                        u_password
+                    }
+                    $.ajax({
+                        url:api_url,
+                        type:"GET",
+                        dataType:"json",
+                        data:data,
+                        success:function(){
+                           alert('login successfull');
+                        },
+                        error:function(d){
+                            alert('unsuccessfull login');
+                        }
+                    });
+                   
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+        email:<input type="text" id="txtemail"/><br>
+        password:<input type="text" id="txtpass"/><br>
+        <button type="button" id="btnclick">login</button>
+    </body>
+
+</html>
